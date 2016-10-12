@@ -5,7 +5,12 @@ body{
   color:rgb(161,38,143);
 }
 
+#container{
+  text-align:center;
+  margin-top:1em;
+}
 h1{
+  margin:.1em 0;
   font-size:3em;
   font-weight:bold;
   text-transform:uppercase;
