@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700';
+
+body{
+  font-family: 'Playfair Display SC', serif;
+  color:rgb(161,38,143);
+}
+
+h1{
+  font-size:3em;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.line-it{
+  position:relative;
+  display:inline-block;
+}
+
+.line-it.through span{
+  display:inline-block;    
+  position:relative;
+}
+.line-it.through span:nth-child(odd){
+  z-index:10;
+}
+.line-it.through span:nth-child(even){
+  z-index:0;
+}
+
+.line-it.hover-only .line{
+    width:0;
+    transition-property:width;
+    -webkit-transition-property: width;
+    transition-timing-function:cubic-bezier(0.22, 0.61, 0.36, 1);
+    -webkit-transition-timing-function:cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+}
+.line-it.hover-only:hover .line{
+    width:100%;
+}
+
+.line-it .line{
+  display:block;
+  position:absolute;
+  height:.15em;
+  background-color:rgba(253,207,45,.9);
+  top:50%;
+  transform:translateY(-50%);
+  width:100%;
+}
+.line-it.through .line{
+    z-index: 5;
+}
+.line-it.behind .line{
+    z-index: -10;
+}
+.line-it.front .line{
+    z-index: 10;
+}
